@@ -1,0 +1,23 @@
+require('babel-register');
+require('babel-polyfill');
+
+module.exports={
+    networks:{
+        devlopment:{
+            host:'127.0.0.1:',
+            port:'5777',
+            network_id:'*'
+        }, 
+        contract_directory:'./src/contracts/', 
+        contract_build_directory:'./src/truffle_abis',
+        compilers:{
+            solc:{
+                version:'^0.5.0',
+                optimizer:{
+                    enabled:true,
+                    runs:200
+                }
+            }
+        }
+    }
+}
